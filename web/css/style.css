@@ -1886,10 +1886,93 @@ i.sele{
 .map {
     margin-top: 5em;
 }
-.map iframe {
-  width: 100%;
-  height: 340px;
-  border: none;
+.order {
+    /*background-color: #ccc;*/
+}
+.order_goods{
+    width: 100%;
+}
+.order_goodsInfo{
+    width: 100%;
+    background-color: #b0b4b8;
+}
+.order_goodsInfo tr td{
+    font-size: 1em;
+    line-height: 3em;
+    padding: 0 0 0 2em;
+}
+.order_title {
+    line-height: 2em;
+    font-size: 1.2em;
+    padding: 2em 1em;
+    border-bottom: 1px solid #ccc;
+}
+.order_goods_good tr{
+    line-height: 6em;
+    border-bottom: 1px solid #ccc;
+}
+.assess_area{
+    width: 100%;
+    padding: 2em 0 0 1em;
+    border-bottom: 1px solid #ccc;
+}
+.assess_area textarea{
+    width: 100%;
+    height: 6em;
+    outline: none;
+    border: 0;
+    font-size: 1em;
+    background-color: transparent;
+}
+.order_title{
+    font-size: 1em;
+}
+.address_title{
+    font-size: 1.1em;
+    line-height: 3em;
+}
+#pull_day::-webkit-inner-spin-button { visibility: hidden; }
+#pull_day{
+    outline: none;
+    font-size: 1em;
+    height: 1.5em;
+}
+#pull_time{
+    vertical-align: middle;
+}
+.order_goods_good tr td{
+    padding: 0 0 0 2em;
+}
+.order_goods_good tr td img{
+    width: 6em;
+    margin-right: 2em;
+    border-radius: 5px;
+}
+.order_price{
+    width: 100%;
+    height: 10em;
+    padding: 0 1em;
+}
+.order_price ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    line-height: 3em;
+}
+#seet_accounts{
+    float: right;
+    width: 8em;
+    height: 3em;
+    border:0;
+    outline: none;
+    background-color: rgb(97,75,54);
+    color: #fff;
+}
+.order_price p{
+    width: 100%;
+    line-height: 3em;
+    float: right;
+    text-align: right;
 }
 .address {
   padding: 3em 0;
