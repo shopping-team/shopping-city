@@ -9,12 +9,12 @@ class UserService{
        $user=new UserDao();
     //    var_dump($data);
     // echo $data['user_name'];
-       $data=array("user_name"=>$parm['user_name'],"pass_word"=>$parm['pass_word']);
+       $data=array("user_name"=>$parm['user_name'],"user_pw"=>$parm['user_pw']);
        $user_id=$user->_add($data);
     
        $userdetail=new UserdetailDao;
      
-       $userdetail_data=array("phone_num"=>$parm['phone_num'],'qq'=>$parm['qq'],'e_mail'=>'','user_id'=>$user_id);
+       $userdetail_data=array("userinfo_tel"=>$parm['userinfo_tel'],'userinfo_sex'=>$parm['userinfo_sex'],'userinfo_date'=>$parm['userinfo_date'],'user_id'=>$user_id);
       $lastId=$user_id=$userdetail->_add($userdetail_data);
       $result=[];
         if($lastId>0){

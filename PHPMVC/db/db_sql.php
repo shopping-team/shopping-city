@@ -248,14 +248,17 @@ class BaseDao{
 
 // return
  $db=new BaseDao; 
-$res=$db->table('table_user')->select();
+$res=$db->table('user')->select();
 // var_dump($db->query('select * from tab_user'));
-var_dump($res);
+// echo(json_encode($res));
 // var_dump($db->table('tab_user')->where('user_id=2')->limit('2,2')->select());
 
-// // $db = new Db();
-// // //查询操作
-// // var_dump($db->table('user')->where('id > 2')->order('id desc')->limit('2,4')->select());
+// $db = new Db();
+//查询操作
+// var_dump(json_encode($db->table('user')->where('user_id > 0')->order('user_id desc')->limit('1,4')->select()));
+//    $m=json_encode($db->table('user')->where('user_id > 0')->order('user_id desc')->limit('1,4')->select());
+//    echo $m;
+
  
 // // //插入操作
 // var_dump($db->table('tab_user')->insert(array('user_id'=>null,'pass_word'=>'qqqqq','user_name'=>'huskyuncle')));

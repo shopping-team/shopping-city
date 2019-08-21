@@ -1,7 +1,7 @@
 <?php
 
 $path=dirname(dirname(__FILE__)); 
-include_once($path.'/services/userService.php');
+include_once($path.'/services/adminService.php');
 class UserController{
     public function register(){
         // 数据验证
@@ -18,10 +18,10 @@ class UserController{
     }
 }
 
-$action=$_GET['action'];
-$userCon=new UserController;
-if($action=='add'){
-    $userCon->register();
-}elseif($action=="del"){
+// $action=$_GET['action'];
+// $userCon=new UserController;
+// if($action=='add'){
+//     $userCon->register();
+// }elseif($action=="del"){
     
-}
+// }
