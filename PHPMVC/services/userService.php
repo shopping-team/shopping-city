@@ -1,9 +1,9 @@
 <?php
 
 
-$path=dirname(dirname(__FILE__)); 
-include_once($path.'/dao/userDao.php');
-include_once($path.'/dao/userdetailDao.php');
+// $path=dirname(dirname(__FILE__)); 
+// include_once($path.'/dao/userDao.php');
+// include_once($path.'/dao/userdetailDao.php');
 class UserService{
     public function add($parm){
        $user=new UserDao();

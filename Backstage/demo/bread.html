@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap 实例 - 边框表格</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/mask.css">
+</head>
+
+<body>
+    <div class="container">
+        <table class="table table-bordered">
+            <h2 class="page-header">
+                面包 <small>
+            </h2>
+            <button id="add">添加</button>
+            <caption>cake</caption>
+            <thead>
+                <tr>
+                    <th>名称</th>
+                    <th>口味</th>
+                    <th>价格</th>
+                    <th>操作</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="tab"></tbody>
+        </table>
+    </div>
+    <div id="addmask">s
+        <div id="bg">
+            <div>商品名称<input id="goods_name" type="text"></div>
+            <div>单个价格<input id="price" type="number"></div>
+            <select name="" id="sel1"></select>
+            <select name="" id="sel2"></select>
+            <div id="selectbtn">
+                <button id="cancel">取消</button>
+                <button id="submit">提交</button>
+            </div>
+        </div>
+    </div>
+    <div id="delmask">
+        <div id="bg">
+            <h3>确定删除此条记录</h3>
+            <div id="selectbtn">
+                <button id="cancel_">取消</button>
+                <button id="confirm">确定</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/update.js"></script>
+    <script src="js/breadajax.js"></script>
+
+</body>
+
+</html>

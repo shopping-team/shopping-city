@@ -1,7 +1,7 @@
 <?php
 
 $path=dirname(dirname(__FILE__)); 
-include_once($path.'/services/userService.php');
+// include_once($path.'/services/userService.php');
 class UserController{
     public function register(){
         // 数据验证
@@ -9,7 +9,7 @@ class UserController{
         "user_pw"=>$_GET['userpw'],
         "userinfo_tel"=>$_GET['userinfotel'],
         "userinfo_sex"=>$_GET['userinfosex'],
-        'userinfo_date'=>$parm['userinfo_date']
+        'userinfo_date'=>$_GET['userinfo_date']
         ];
     //  echo json_encode($data);
         $userService=new userService;

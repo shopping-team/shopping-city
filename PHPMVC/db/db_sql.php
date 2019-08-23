@@ -1,6 +1,6 @@
 <?php
 // header("Content-Type:text/html;charset=utf-8"); 
-include_once(__DIR__.'/db_pdo.php');
+// include_once(__DIR__.'/db_pdo.php');
 /**
  *php操作mysql的工具类
  */
@@ -247,8 +247,9 @@ class BaseDao{
 }
 
 // return
- $db=new BaseDao; 
-$res=$db->table('user')->select();
+// $db=new BaseDao; 
+// $res=$db->table('image')->select();
+//    echo $res;
 // var_dump($db->query('select * from tab_user'));
 // echo(json_encode($res));
 // var_dump($db->table('tab_user')->where('user_id=2')->limit('2,2')->select());

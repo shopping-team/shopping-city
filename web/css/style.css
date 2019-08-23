@@ -1886,9 +1886,9 @@ i.sele{
 .map {
     margin-top: 5em;
 }
-.order {
-    /*background-color: #ccc;*/
-}
+/* .order {
+    /*background-color: #ccc;
+} */
 .order_goods{
     width: 100%;
 }
@@ -3416,4 +3416,5 @@ h2 {
     bottom: 17%;
 }
 }
+
 /*--//responsive-design---*/
