@@ -10,14 +10,15 @@
 <!-- //Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" type="text/css" href="./css/user_pay.css">
 <!-- js -->
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 <!-- //js -->
 <!-- cart -->
 <script src="js/simpleCart.min.js"> </script>
-<script src="js/order_ajax.js"> </script>
 <!-- cart -->
+<script src="./js/order_ajax.js"></script>
 </head>
 <body>
 	<!--header-->
@@ -285,106 +286,23 @@
 	<!--//header-->
 	<!--contact-->
 	<div class="contact">
-		<div class="container">
-			<div class="map">	
-				<div class="order">
-					<table class="order_goods">
-						<thead class="order_goodsInfo">
-								<tr>
-									<td>商品</td>
-									<td>单价</td>
-									<td>数量</td>
-									<td>金额</td>
-								</tr>
-						</thead>
-						<tbody class="order_goods_good"></tbody>
-					</table>
-					<div class="assess_area">
-						<label>订单留言：</label>
-						<textarea placeholder="请留下您对订单的特殊要求,200字以内。"></textarea>
-					</div>
-					<div class="order_title">
-						<p class="address_title">配送地址</p>
-						<div class="order_address">
-							<span>省:</span>
-							<select id="address_province">
-								<option>陕西省</option>
-							</select>
-							<span>市:</span>
-							<select id="address_city">
-								<option>西安市</option>
-							</select>
-							<span>区:</span>
-							<select id="address_area">
-								<option>雁塔区</option>
-							</select>
-							<p class="address_title">配送时间</p>
-							<input type="date" placeholder="请输入配送日期" id="pull_day">
-							<select id="pull_time">
-								<option>00:00</option>
-								<option>01:00</option>
-								<option>02:00</option>
-								<option>03:00</option>
-								<option>04:00</option>
-								<option>05:00</option>
-								<option>06:00</option>
-								<option>07:00</option>
-								<option>08:00</option>
-								<option>09:00</option>
-								<option>10:00</option>
-								<option>11:00</option>
-								<option>12:00</option>
-								<option>13:00</option>
-								<option>14:00</option>
-								<option>15:00</option>
-								<option>16:00</option>
-								<option>17:00</option>
-								<option>18:00</option>
-								<option>19:00</option>
-								<option>20:00</option>
-								<option>21:00</option>
-								<option>22:00</option>
-								<option>23:00</option>
-								<option>24:00</option>
-							</select>
-						</div>
-					</div>
-					<div class="order_price">
-						<!-- <ul>
-							<li>商品余额<span>￥<span>327.00</span></span></li>
-							<li>配送费<span>￥<span>00.00</span></span></li>
-							<li>实收金额<span>￥<span>327.00</span></span></li>
-							<li>支付金额<span>￥<span>327.00</span></span></li>
-						</ul>
-						<p>你总共需要支付	<span>￥<span>327.00</span></span></p>
-						<button id="seet_accounts">下单结算</button> -->
-					</div>
+		<div class="user_pay">
+			<!-- <div class="order_pay">
+				<p class="user_pay">成功提交订单</p>
+				<div class="order_detail">
+					<p>支付流水号：<span>123125135135425234321</span></p>
+					<p>付款人：<span>萧敬腾</span></p>
+					<p>应付订单总额：<span>￥<span>199.00</span></span></p>
+					<button id="pay_money">立即支付</button>
 				</div>
-			</div>
-			<div class="address">
-				<div class="col-md-4 address-grids">
-					<h4>地址 :</h4>
-					<ul>
-						<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-						<p>	陕西省西安市<br>
-							雁塔区瞪羚一路<br>
-							蓝鸥蛋糕 xxxx
-						</p>
-					</ul>
-				</div>
-				<div class="col-md-4 address-grids">
-					<h4>联系方式 :</h4>
-					<p><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>+029 0101001</p>
-					<p><span class="glyphicon glyphicon-print" aria-hidden="true"></span>+2 0010000101001</p>
-				</div>
-				<div class="col-md-4 address-grids">
-					<h4>邮箱 :</h4>
-					<p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:example@mail.com">mail@example.com</a></p>
-				</div>
-				<div class="clearfix"> </div>
-			</div>		
-			
+			</div> -->
 		</div>
+	</div>
+	<div class="mask">
+		<p>扫码支付</p>
+		<span><img src="./images/二维码.png">
+			<div id="delete_mask">x</div>
+		</span>
 	</div>
 	<!--//contact-->
 	<!--footer-->
