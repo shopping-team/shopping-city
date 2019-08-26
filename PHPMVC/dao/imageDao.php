@@ -1,13 +1,9 @@
 <?php
-// // echo __DIR__;
-// // echo __DIR__.'/../db/db_sql.php';
-// // include
-// $path=dirname(dirname(__FILE__)); 
-// require_once($path.'/db/db_sql.php');
 class ImageDao extends BaseDao{
     public function _select(){
         // $res=parent::table('tab_user')->select();
         $res=parent::table('image')->select();
+
         return $res;
     }
     public function _del($id){
@@ -28,4 +24,4 @@ class ImageDao extends BaseDao{
     }
 }
 // $s=new ImageDao;
-// var_dump($s->_selectAll());
+// var_dump($s->_select());

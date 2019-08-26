@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : wtx
+ Source Server         : 21_cake
  Source Server Type    : MySQL
- Source Server Version : 100138
+ Source Server Version : 100137
  Source Host           : localhost:3306
  Source Schema         : cake
 
  Target Server Type    : MySQL
- Target Server Version : 100138
+ Target Server Version : 100137
  File Encoding         : 65001
 
- Date: 23/08/2019 16:58:15
+ Date: 26/08/2019 09:00:59
 */
 
 SET NAMES utf8mb4;
@@ -3642,6 +3642,30 @@ CREATE TABLE `assess`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
+-- Table structure for caketype
+-- ----------------------------
+DROP TABLE IF EXISTS `caketype`;
+CREATE TABLE `caketype`  (
+  `caketype_id` int(11) NOT NULL AUTO_INCREMENT,
+  `goodstype_id` int(11) NOT NULL,
+  `caketype` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`caketype_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of caketype
+-- ----------------------------
+INSERT INTO `caketype` VALUES (1, 1, '奶油');
+INSERT INTO `caketype` VALUES (2, 1, '慕斯');
+INSERT INTO `caketype` VALUES (3, 1, '巧克力');
+INSERT INTO `caketype` VALUES (4, 1, '水果');
+INSERT INTO `caketype` VALUES (5, 1, '坚果');
+INSERT INTO `caketype` VALUES (6, 4, '咖啡');
+INSERT INTO `caketype` VALUES (7, 4, '果汁');
+INSERT INTO `caketype` VALUES (8, 4, '汽水');
+INSERT INTO `caketype` VALUES (9, 4, '茶水');
+
+-- ----------------------------
 -- Table structure for goods
 -- ----------------------------
 DROP TABLE IF EXISTS `goods`;
@@ -3653,7 +3677,7 @@ CREATE TABLE `goods`  (
   `tastetype_id` int(11) NOT NULL COMMENT '口味类id',
   `goodstype_id` int(11) NOT NULL COMMENT '商品类id',
   PRIMARY KEY (`goods_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Table structure for goodsdatail
@@ -3685,6 +3709,84 @@ INSERT INTO `goodstype` VALUES (3, '冰激凌');
 INSERT INTO `goodstype` VALUES (4, '饮品');
 
 -- ----------------------------
+-- Table structure for image
+-- ----------------------------
+DROP TABLE IF EXISTS `image`;
+CREATE TABLE `image`  (
+  `image_id` int(11) NOT NULL AUTO_INCREMENT,
+  `image_url` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `goods_id` int(11) NOT NULL,
+  PRIMARY KEY (`image_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 65 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of image
+-- ----------------------------
+INSERT INTO `image` VALUES (1, 'images/imgs/brake.jpg', 6);
+INSERT INTO `image` VALUES (2, 'images/imgs/brake2.jpg', 6);
+INSERT INTO `image` VALUES (3, 'images/imgs/break3.jpg', 6);
+INSERT INTO `image` VALUES (4, 'images/imgs/break4.jpg', 6);
+INSERT INTO `image` VALUES (5, 'images/imgs/break5.jpg', 6);
+INSERT INTO `image` VALUES (6, 'images/imgs/cake1.jpg', 1);
+INSERT INTO `image` VALUES (7, 'images/imgs/cake1.jpg', 1);
+INSERT INTO `image` VALUES (8, 'images/imgs/cake3.jpg', 2);
+INSERT INTO `image` VALUES (9, 'images/imgs/cake5.jpg', 1);
+INSERT INTO `image` VALUES (10, 'images/imgs/cake6.jpg', 4);
+INSERT INTO `image` VALUES (11, 'images/imgs/cake7.jpg', 5);
+INSERT INTO `image` VALUES (12, 'images/imgs/cake8.jpg', 4);
+INSERT INTO `image` VALUES (13, 'images/imgs/cake9.jpg', 5);
+INSERT INTO `image` VALUES (14, 'images/imgs/cake10.jpg', 2);
+INSERT INTO `image` VALUES (15, 'images/imgs/cake11.jpg', 2);
+INSERT INTO `image` VALUES (16, 'images/imgs/cake12.jpg', 3);
+INSERT INTO `image` VALUES (17, 'images/imgs/cake13.jpg', 5);
+INSERT INTO `image` VALUES (18, 'images/imgs/cake14.jpg', 5);
+INSERT INTO `image` VALUES (19, 'images/imgs/cake15.jpg', 2);
+INSERT INTO `image` VALUES (20, 'images/imgs/cake16.jpg', 1);
+INSERT INTO `image` VALUES (21, 'images/imgs/cake17.jpg', 1);
+INSERT INTO `image` VALUES (22, 'images/imgs/cake18.jpg', 2);
+INSERT INTO `image` VALUES (23, 'images/imgs/cake19.jpg', 3);
+INSERT INTO `image` VALUES (24, ' images/imgs/cake20.jpg', 4);
+INSERT INTO `image` VALUES (26, ' images/imgs/cake22.jpg', 5);
+INSERT INTO `image` VALUES (27, 'images/imgs/cake23.jpg', 1);
+INSERT INTO `image` VALUES (28, 'images/imgs/cake24.jpg', 2);
+INSERT INTO `image` VALUES (29, 'images/imgs/cake25.jpg', 2);
+INSERT INTO `image` VALUES (30, 'images/imgs/cake27.jpg', 1);
+INSERT INTO `image` VALUES (31, 'images/imgs/cake28.jpg', 4);
+INSERT INTO `image` VALUES (32, 'images/imgs/cake29.jpg', 1);
+INSERT INTO `image` VALUES (33, 'images/imgs/cake30.jpg', 2);
+INSERT INTO `image` VALUES (34, 'images/imgs/drink.jpg', 8);
+INSERT INTO `image` VALUES (35, 'images/imgs/drink1.jpg', 9);
+INSERT INTO `image` VALUES (36, 'images/imgs/drink2.jpg', 9);
+INSERT INTO `image` VALUES (37, 'images/imgs/drink3.jpg', 8);
+INSERT INTO `image` VALUES (38, 'images/imgs/drink4.jpg', 8);
+INSERT INTO `image` VALUES (39, 'images/imgs/drink5.jpg', 9);
+INSERT INTO `image` VALUES (40, 'images/imgs/drink6.jpg', 10);
+INSERT INTO `image` VALUES (41, 'images/imgs/drink7.jpg', 9);
+INSERT INTO `image` VALUES (42, 'images/imgs/drink8.jpg', 10);
+INSERT INTO `image` VALUES (43, 'images/imgs/drink9.jpg', 9);
+INSERT INTO `image` VALUES (44, 'images/imgs/drink10.jpg', 8);
+INSERT INTO `image` VALUES (45, 'images/imgs/drink11.jpg', 11);
+INSERT INTO `image` VALUES (46, 'images/imgs/drink12.jpg', 11);
+INSERT INTO `image` VALUES (47, 'images/imgs/drink13.jpg', 12);
+INSERT INTO `image` VALUES (48, 'images/imgs/drink14.jpg', 8);
+INSERT INTO `image` VALUES (49, 'images/imgs/drink15.jpg', 8);
+INSERT INTO `image` VALUES (50, 'images/imgs/drink16.jpg', 9);
+INSERT INTO `image` VALUES (51, 'images/imgs/drink17.jpg', 10);
+INSERT INTO `image` VALUES (52, 'images/imgs/drink18.jpg', 11);
+INSERT INTO `image` VALUES (53, 'images/imgs/drink19.jpg', 12);
+INSERT INTO `image` VALUES (54, 'images/imgs/drink20.jpg', 10);
+INSERT INTO `image` VALUES (55, 'images/imgs/drink21.jpg', 9);
+INSERT INTO `image` VALUES (56, 'images/imgs/drink22.jpg', 8);
+INSERT INTO `image` VALUES (57, 'images/imgs/ice.jpg', 7);
+INSERT INTO `image` VALUES (58, 'images/imgs/ice2.jpg', 7);
+INSERT INTO `image` VALUES (59, 'images/imgs/ice3.jpg', 7);
+INSERT INTO `image` VALUES (60, 'images/imgs/ice4.jpg', 7);
+INSERT INTO `image` VALUES (61, 'images/imgs/ice5.jpg', 7);
+INSERT INTO `image` VALUES (62, 'images/imgs/ice6.jpg', 7);
+INSERT INTO `image` VALUES (63, 'images/imgs/ice7.jpg', 7);
+INSERT INTO `image` VALUES (64, 'images/imgs/ice8.jpg', 7);
+
+-- ----------------------------
 -- Table structure for order
 -- ----------------------------
 DROP TABLE IF EXISTS `order`;
@@ -3701,7 +3803,7 @@ CREATE TABLE `order`  (
 DROP TABLE IF EXISTS `order_detail`;
 CREATE TABLE `order_detail`  (
   `orderdetail_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户详情ID',
-  `orderdetail_num` int(11) NOT NULL COMMENT '订单详情数量',
+  `goods_num` int(11) NOT NULL COMMENT '订单详情数量',
   `goods_id` int(11) NOT NULL COMMENT '商品ID',
   `order_id` int(11) NOT NULL COMMENT '订单ID',
   PRIMARY KEY (`orderdetail_id`) USING BTREE
@@ -3733,12 +3835,11 @@ CREATE TABLE `tastetype`  (
   `goodstype_id` int(11) NOT NULL,
   `tastetype_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`tastetype_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of tastetype
 -- ----------------------------
-INSERT INTO `tastetype` VALUES (0, 1, '水果');
 INSERT INTO `tastetype` VALUES (1, 1, '奶油');
 INSERT INTO `tastetype` VALUES (2, 1, '慕斯');
 INSERT INTO `tastetype` VALUES (3, 1, '巧克力');
@@ -3749,6 +3850,7 @@ INSERT INTO `tastetype` VALUES (8, 4, '汽水');
 INSERT INTO `tastetype` VALUES (9, 4, '茶水');
 INSERT INTO `tastetype` VALUES (10, 2, '面包');
 INSERT INTO `tastetype` VALUES (11, 3, '冰淇淋');
+INSERT INTO `tastetype` VALUES (12, 1, '水果');
 
 -- ----------------------------
 -- Table structure for user
@@ -3760,7 +3862,7 @@ CREATE TABLE `user`  (
   `user_pw` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL COMMENT '用户密码',
   `userinfo_id` int(11) NOT NULL,
   PRIMARY KEY (`user_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 41 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 42 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of user
@@ -3774,6 +3876,7 @@ INSERT INTO `user` VALUES (37, 'www', '2', 36);
 INSERT INTO `user` VALUES (38, '', '', 37);
 INSERT INTO `user` VALUES (39, '', '', 38);
 INSERT INTO `user` VALUES (40, '', '', 39);
+INSERT INTO `user` VALUES (41, '李四', '123', 40);
 
 -- ----------------------------
 -- Table structure for user_info
@@ -3786,7 +3889,7 @@ CREATE TABLE `user_info`  (
   `userinfo_date` int(11) NULL DEFAULT NULL COMMENT '用户生日(存为时间戳格式)',
   `address_id` int(11) NOT NULL COMMENT '地址id',
   PRIMARY KEY (`userinfo_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 40 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 41 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of user_info
@@ -3800,5 +3903,6 @@ INSERT INTO `user_info` VALUES (36, 16467346356, 0, 0, 0);
 INSERT INTO `user_info` VALUES (37, 0, 1, 0, 0);
 INSERT INTO `user_info` VALUES (38, 0, 1, 0, 0);
 INSERT INTO `user_info` VALUES (39, 0, 1, 2147483647, 0);
+INSERT INTO `user_info` VALUES (40, 13456781234, 0, 2147483647, 0);
 
 SET FOREIGN_KEY_CHECKS = 1;

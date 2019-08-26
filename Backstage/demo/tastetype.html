@@ -17,7 +17,7 @@
                 商品类型 <small>
             </h2>
             
-            <button><a class="J_menuItem" href="add.html">添加</a></button>
+            <button id="add">添加</button>
             <caption>tastetype</caption>
             <thead>
                 <tr>
@@ -32,12 +32,8 @@
     </div>
     <div id="addmask">
         <div id="bg">
-            <div>商品名称<input id="goods_name" type="text"></div>
-            <div>单个价格<input id="price" type="number"></div>
+            <div>商品类型名称<input id="tastetype_name" type="text"></div>
             <select name="" id="sel1"></select>
-            <select name="" id="sel2">
-                <option value="">奶油</option>
-            </select>
             <div id="selectbtn">
                 <button id="cancel">取消</button>
                 <button id="submit">提交</button>
@@ -53,8 +49,7 @@
             </div>
         </div>
     </div>
-    <script src="js/update.js"></script>
-    <script src="js/cakeajax.js"></script>
+    <script src="js/tastetypeajax.js"></script>
 
 </body>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Home</title>
+<title>index</title>
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -65,12 +65,12 @@
 				</div>
 				<div class="header-right login">
 					<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-					<div id="loginBox">                
-						<form id="loginForm">
+					<div id="loginBox">
+						<div id="loginForm">
 							<fieldset id="body">
 								<fieldset>
-									<label for="email">邮箱</label>
-									<input type="text" name="email" id="email">
+									<label for="username">用户</label>
+									<input type="text" name="username" id="username">
 								</fieldset>
 								<fieldset>
 									<label for="password">密码</label>
@@ -78,9 +78,16 @@
 								</fieldset>
 								<input type="submit" id="login" value="Sign in">
 								<label for="checkbox"><input type="checkbox" id="checkbox"> <i>记住账号</i></label>
+								<div id="hintall"></div>
 							</fieldset>
 							<p>新用户 ? <a class="sign" href="account.html">注册</a> <span><a href="#">忘记密码?</a></span></p>
-						</form>
+
+						</div>
+						
+						<div id="updatemsg" style="background: white;border:1px solid gray ;padding:10px 30px;display: none">
+							<div id="msg"></div>
+							<!-- <a href="updatemsg.html">修改密码</a> -->
+						</div>
 					</div>
 				</div>
 				<div class="header-right cart">
@@ -244,7 +251,7 @@
             data:{'c':'image','a':'select'},
             success:function(e){
                 $res=JSON.parse(e);
-                console.log($res);
+                // console.log($res);
                 html='';
              for(var $i=0;$i<20;$i++){
                     // $u=$res[5]['image_url'];
@@ -260,5 +267,44 @@
             
         })
 		</script>
+
+<script>
+
+	$('#login').on('click', function () {
+		$lname = $('#username').val();
+		$lpw = $('#password').val();
+		// console.log($lname, $lpw);
+		// console.log(111);
+		$.ajax({
+			url: './../PHPMVC/index_.php',
+			type: 'post',
+			data: {
+				"c": 'loginuser',
+				"a": 'select'
+			},
+			success: function (e) {
+				$res = JSON.parse(e);
+				console.log($res);
+				for (var i = 0; i < $res.length; i++) {
+					if ($lname === $res[i]['user_name'] && $lpw === $res[i]['user_pw']) {
+						console.log("登录正确");
+						$('#loginForm').hide();
+						$('#updatemsg').show();
+						$('#msg').html("~~~你好！"+$lname).css('padding','30px 0');
+
+						return;
+					} else {
+						console.log("登录错误");
+						$('#hintall').html("*账号或密码输入有误！").css('color','red');
+					}
+				}
+			},
+			error: function (e) {
+				console.log("error");
+			}
+		})
+	})
+
+</script>
 </body>
 </html>
