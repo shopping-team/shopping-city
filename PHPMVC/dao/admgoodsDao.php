@@ -20,7 +20,7 @@ class AdmgoodsDao extends BaseDao{
     }
     // 多表查询
     public function _anotherSelect($id){
-        $res=parent::query('select * from `tastetype` a where a.goodstype_id ='.$id);
+        $res=parent::query('select * from `caketype` where caketype.goodstype_id ='.$id);
         return $res;
     }
 }

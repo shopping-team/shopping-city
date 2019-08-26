@@ -29,3 +29,5 @@ class GoodstypeDao extends BaseDao{
         return $res;
     }
 }
+// $s=new GoodsDao;
+// echo json_encode($s->_anotherSelect());

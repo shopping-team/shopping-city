@@ -1,53 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Checkout</title>
-	<!-- Custom Theme files -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="" />
-	<script
-		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<!-- //Custom Theme files -->
-	<link rel="stylesheet" href="css/carts.css">
-	<link rel="stylesheet" href="css/reset.css">
-
-	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-	<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-	<!-- js -->
-	<script src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
-	<!-- //js -->
-	<!-- cart -->
-	<script src="js/simpleCart.min.js"> </script>
-	<!-- cart -->
-	<script src="./js/checkout.js"></script>
-	<style>
-		.list_img>a>img {
-			width: 50px;
-			height: 80px;
-		}
-
-		/* .sum{
-		height: 50px;
-	} */
-	</style>
+<title>Checkout</title>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //Custom Theme files -->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<!-- js -->
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+<!-- //js -->
+<!-- cart -->
+<script src="js/simpleCart.min.js"> </script>
+<!-- cart -->
 </head>
-
 <body>
 	<!--header-->
 	<div class="header">
 		<div class="container">
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse"
-						data-target="#bs-example-navbar-collapse-1">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<h1 class="navbar-brand"><a href="index.html">Yummy</a></h1>
+					<h1 class="navbar-brand"><a  href="index.html">Yummy</a></h1>
 				</div>
 				<!--navbar-header-->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -70,7 +53,7 @@
 			</nav>
 			<div class="header-info">
 				<div class="header-right search-box">
-					<a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+					<a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>				
 					<div class="search">
 						<form class="navbar-form">
 							<input type="text" class="form-control">
@@ -78,35 +61,34 @@
 								搜索
 							</button>
 						</form>
-					</div>
+					</div>	
 				</div>
 				<div class="header-right login">
 					<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-					<!-- <div id="loginBox">
+					<div id="loginBox">                
 						<form id="loginForm">
 							<fieldset id="body">
 								<fieldset>
-									邮箱
+									<label for="email">邮箱</label>
 									<input type="text" name="email" id="email">
 								</fieldset>
 								<fieldset>
-
-									密码<input type="password" name="password" id="password">
+									<label for="password">密码</label>
+									<input type="password" name="password" id="password">
 								</fieldset>
 								<input type="submit" id="login" value="登录">
-								 <label for="checkbox"><input type="checkbox" id="checkbox"> <i>记住密码</i></label> 
+								<label for="checkbox"><input type="checkbox" id="checkbox"> <i>记住密码</i></label>
 							</fieldset>
 							<p>新用户 ? <a class="sign" href="account.html">注册</a> <span><a href="#">忘记密码?</a></span></p>
 						</form>
-					</div> -->
+					</div>
 				</div>
 				<div class="header-right cart">
 					<a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
 					<div class="cart-box">
 						<h4><a href="checkout.html">
-								<span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity"
-									class="simpleCart_quantity"> 0 </span>)
-							</a></h4>
+							<span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>) 
+						</a></h4>
 						<p><a href="javascript:;" class="simpleCart_empty">清空购物车</a></p>
 						<div class="clearfix"> </div>
 					</div>
@@ -120,18 +102,18 @@
 	<!--cart-items-->
 	<div class="cart-items">
 		<div class="container">
-			<h2>我的购物车</h2>
-			<!-- <script>$(document).ready(function (c) {
-					$('.close1').on('click', function (c) {
-						$('.cart-header').fadeOut('slow', function (c) {
-							$('.cart-header').remove();
-						});
+			<h2>我的购物车(3)</h2>
+			<script>$(document).ready(function(c) {
+				$('.close1').on('click', function(c){
+					$('.cart-header').fadeOut('slow', function(c){
+						$('.cart-header').remove();
 					});
+					});	  
 				});
-			</script> -->
-			<!-- <div class="cart-header"> 
-		 <div class="close1"> </div> 
-			 <div class="cart-sec simpleCart_shelfItem">
+			</script>
+			<div class="cart-header">
+				<div class="close1"> </div>
+				<div class="cart-sec simpleCart_shelfItem">
 					<div class="cart-item cyc">
 						 <img src="images/m1.png" class="img-responsive" alt="">
 					</div>
@@ -148,7 +130,7 @@
 						</div>	
 					</div>
 					<div class="clearfix"></div>
-				</div> 
+				</div>
 			</div>
 			 <script>$(document).ready(function(c) {
 					$('.close2').on('click', function(c){
@@ -157,11 +139,10 @@
 					});
 					});	  
 					});
-			 </script> -->
-
-			<!-- <div class="cart-header2"> 
-			<div class="close2"> </div> 
-			 <div class="cart-sec simpleCart_shelfItem">
+			 </script>
+			<div class="cart-header2">
+				<div class="close2"> </div>
+				<div class="cart-sec simpleCart_shelfItem">
 					<div class="cart-item cyc">
 						 <img src="images/m2.png" class="img-responsive" alt="">
 					</div>
@@ -188,9 +169,9 @@
 					});	  
 					});
 				</script>
-			<div class="cart-header3"> -->
-			<!-- <div class="close3"> </div> -->
-			<!-- <div class="cart-sec simpleCart_shelfItem">
+			<div class="cart-header3">
+				<div class="close3"> </div>
+				<div class="cart-sec simpleCart_shelfItem">
 					<div class="cart-item cyc">
 						 <img src="images/m3.png" class="img-responsive" alt="">
 					</div>
@@ -207,444 +188,62 @@
 						</div>	
 					</div>
 					<div class="clearfix"></div>
-				</div> -->
-
-
-			<section class="cartMain">
-				<div class="cartMain_hd">
-					<ul class="order_lists cartTop">
-						<li class="list_chk">
-							<!--所有商品全选-->
-							<input type="checkbox" id="all" class="whole_check">
-							<label for="all"></label>
-							全选
-						</li>
-						<li class="list_con">商品信息</li>
-						<li class="list_info">商品参数</li>
-						<li class="list_price">单价</li>
-						<li class="list_amount">数量</li>
-						<li class="list_sum">金额</li>
-						<li class="list_op">操作</li>
+				</div>
+			</div>		
+		</div>
+	</div>
+	<!--//checkout-->	
+	<!--footer-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-2 footer-grid">
+					<h4>公司</h4>
+					<ul>
+						<li><a href="index.html">制品</a></li>
+						<li><a href="#">在这里工作</a></li>
+						<li><a href="#">球队</a></li>
+						<li><a href="#">精彩</a></li>
 					</ul>
 				</div>
-
-				<div class="cartBox">
-					<div class="shop_info">
-						<div class="shop_name">
-						</div>
-					</div>
-					<div class="order_content">
-						<!-- <ul class="order_lists">
-							
-						</ul> 
-						<ul class="order_lists">
-							<li class="list_chk">
-								<input type="checkbox" id="checkbox_3" class="son_check">
-								<label for="checkbox_3"></label>
-							</li>
-							<li class="list_con">
-								<div class="list_img"><a href="javascript:;"><img src="images/2.png" alt=""></a></div>
-								<div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
-							</li>
-							<li class="list_info">
-								<p>规格：默认</p>
-								<p>尺寸：16*16*3(cm)</p>
-							</li>
-							<li class="list_price">
-								<p class="price">￥780</p>
-							</li>
-							<li class="list_amount">
-								<div class="amount_box">
-									<a href="javascript:;" class="reduce reSty">-</a>
-									<input type="text" value="1" class="sum">
-									<a href="javascript:;" class="plus">+</a>
-								</div>
-							</li>
-							<li class="list_sum">
-								<p class="sum_price">￥780</p>
-							</li>
-							<li class="list_op">
-								<p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
-							</li>
-						</ul>
-						<ul class="order_lists">
-							<li class="list_chk">
-								<input type="checkbox" id="checkbox_6" class="son_check">
-								<label for="checkbox_6"></label>
-							</li>
-							<li class="list_con">
-								<div class="list_img"><a href="javascript:;"><img src="images/2.png" alt=""></a></div>
-								<div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
-							</li>
-							<li class="list_info">
-								<p>规格：默认</p>
-								<p>尺寸：16*16*3(cm)</p>
-							</li>
-							<li class="list_price">
-								<p class="price">￥180</p>
-							</li>
-							<li class="list_amount">
-								<div class="amount_box">
-									<a href="javascript:;" class="reduce reSty">-</a>
-									<input type="text" value="1" class="sum">
-									<a href="javascript:;" class="plus">+</a>
-								</div>
-							</li>-->
-						<!-- <li class="list_sum">
-								<p class="sum_price">￥180</p>
-							</li>
-							<li class="list_op">
-								<p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
-							</li> -->
-						</ul>
+				<div class="col-md-2 footer-grid">
+					<h4>服务</h4>
+					<ul>
+						<li><a href="#">支持</a></li>
+						<li><a href="#">常见问题</a></li>
+						<li><a href="#">保证</a></li>
+						<li><a href="contact.html">联系我们</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 footer-grid">
+					<h4>订单和退货</h4>
+					<ul>
+						<li><a href="#">订单问题</a></li>
+						<li><a href="#">送货问题</a></li>
+						<li><a href="#">退货政策</a></li>
+						<li><a href="#">数字礼品卡</a></li>
+					</ul>
+				</div>
+				<div class="col-md-2 footer-grid">
+					<h4>法律</h4>
+					<ul>
+						<li><a href="#">隐私</a></li>
+						<li><a href="#">条款和条件</a></li>
+						<li><a href="#">社会责任感</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 footer-grid icons">
+					<h4>联系我们</h4>
+					<ul>
+						<li><a href="#"><img src="images/i1.png" alt=""/>在Facebook上关注我们</a></li>
+						<li><a href="#"><img src="images/i2.png" alt=""/>在推特上关注我们</a></li>
+						<li><a href="#"><img src="images/i3.png" alt=""/>在Google-Plus上关注我们</a></li>
+						<li><a href="#"><img src="images/i4.png" alt=""/>在Pinterest上关注我们</a></li>
 					</div>
 				</div>
-
-
-
-
-				<!--底部-->
-				<div class="bar-wrapper">
-					<div class="bar-right">
-						<div class="piece">已选商品<strong class="piece_num">0</strong>件</div>
-						<div class="totalMoney">共计: <strong class="total_text">0.00</strong></div>
-						<div class="calBtn"><a href="javascript:;">结算</a></div>
-					</div>
-				</div>
-			</section>
-			<section class="model_bg"></section>
-			<section class="my_model">
-				<p class="title">删除宝贝<span class="closeModel">X</span></p>
-				<p>您确认要删除该宝贝吗？</p>
-				<div class="opBtn"><a href="javascript:;" class="dialog-sure">确定</a><a href="javascript:;"
-						class="dialog-close">关闭</a></div>
-			</section>
-
+				<div class="clearfix"></div>
+			</div>
 		</div>
-
 	</div>
-	</div>
-
-	<script>
-		$.ajax({
-			url: './../PHPMVC/index_.php',
-			type: 'get',
-			data: { 'c': 'admin', 'a': 'select' },
-			success: function (e) {
-				// console.log(e);
-				$b = JSON.parse(e);
-				// console.log($rec);
-				// $b = res[6]['u_url'];
-				// console.log($b);
-				console.log($b);
-				console.log($b[0]['u_name']);
-				console.log($b[0]['u_url']);
-				console.log($b[0]['u_gg']);
-				// console.log($b['尺寸所有值']['尺寸值'])
-				// console.log()
-				var html = "";
-				str = JSON.parse($b[0]['u_gg'].replace(/'/g, '"'));
-				console.log(str[0]['尺寸所有值'][0]['尺寸值']);//尺寸大小
-				console.log(str[0]['尺寸所有值'][0]['售价']);//价格
-				console.log(str[0]['尺寸']);//大小单位
-				for (var i = 0; i < $b.length; i++) {
-					html += '<ul class="order_lists"><li class="list_chk"><input type="checkbox" id="checkbox_2" class="son_check"><label for="checkbox_2"></label></li><li class="list_con"><div class="list_img"><a href="javascript:;"><img src="' + $b[0]['u_url'] + '" alt=""></a></div><div class="list_text"><a href="javascript:;">' + $b[0]['u_name'] + '</a></div></li><li class="list_info"><p>规格：' + str[0]['尺寸'] + '</p><p>尺寸：' + str[0]['尺寸所有值'][0]['尺寸值'] + '</p></li><li class="list_price"><p class="price">￥980</p></li><li class="list_amount"><div class="amount_box"><a href="javascript:;" class="reduce reSty">-</a><input type="text" value="1" class="sum"><a href="javascript:;" class="plus">+</a></div></li><li class="list_sum"><p class="sum_price">￥980</p></li><li class="list_op"><p class="del"><a href="javascript:;" class="delBtn" >移除商品</a></p></li></ul>';
-
-				}
-
-				$('.order_content').append(html);
-				// console.log($('.delBtn'));
-				// 	$('.delBtn').click(function () {
-				// 		$order_lists = $(this).parents('.order_lists');
-				// 		$order_content = $order_lists.parents('.order_content');
-				// 		$('.model_bg').fadeIn(300);
-				// 		$('.my_model').fadeIn(300);
-				// 	})
-				// 	$('.dialog-sure').click(function () {
-				// 		$order_lists.remove();
-				// 		if ($order_content.html().trim() == null || $order_content.html().trim().length == 0) {
-				// 			$order_content.parents('.cartBox').remove();
-				// 		}
-				// 		closeM();
-				// 		$sonCheckBox = $('.son_check');
-				// 		totalMoney();
-				// 	})
-					$('.dialog-sure').click(function(){
-						console.log(111111);
-					})
-				$(function () {
-
-					
-					//全局的checkbox选中和未选中的样式
-					var $allCheckbox = $('input[type="checkbox"]'),     //全局的全部checkbox
-						$wholeChexbox = $('.whole_check'),
-						$cartBox = $('.cartBox'),                       //每个商铺盒子
-						$shopCheckbox = $('.shopChoice'),               //每个商铺的checkbox
-						$sonCheckBox = $('.son_check');                 //每个商铺下的商品的checkbox
-					$allCheckbox.click(function () {
-						if ($(this).is(':checked')) {
-							$(this).next('label').addClass('mark');
-						} else {
-							$(this).next('label').removeClass('mark')
-						}
-					});
-
-					//===============================================全局全选与单个商品的关系================================
-					$wholeChexbox.click(function () {
-						var $checkboxs = $cartBox.find('input[type="checkbox"]');
-						if ($(this).is(':checked')) {
-							$checkboxs.prop("checked", true);
-							$checkboxs.next('label').addClass('mark');
-						} else {
-							$checkboxs.prop("checked", false);
-							$checkboxs.next('label').removeClass('mark');
-						}
-						totalMoney();
-					});
-
-
-					$sonCheckBox.each(function () {
-						$(this).click(function () {
-							if ($(this).is(':checked')) {
-								//判断：所有单个商品是否勾选
-								var len = $sonCheckBox.length;
-								var num = 0;
-								$sonCheckBox.each(function () {
-									if ($(this).is(':checked')) {
-										num++;
-									}
-								});
-								if (num == len) {
-									$wholeChexbox.prop("checked", true);
-									$wholeChexbox.next('label').addClass('mark');
-								}
-							} else {
-								//单个商品取消勾选，全局全选取消勾选
-								$wholeChexbox.prop("checked", false);
-								$wholeChexbox.next('label').removeClass('mark');
-							}
-						})
-					})
-
-					//=======================================每个店铺checkbox与全选checkbox的关系/每个店铺与其下商品样式的变化===================================================
-
-					//店铺有一个未选中，全局全选按钮取消对勾，若店铺全选中，则全局全选按钮打对勾。
-					$shopCheckbox.each(function () {
-						$(this).click(function () {
-							if ($(this).is(':checked')) {
-								//判断：店铺全选中，则全局全选按钮打对勾。
-								var len = $shopCheckbox.length;
-								var num = 0;
-								$shopCheckbox.each(function () {
-									if ($(this).is(':checked')) {
-										num++;
-									}
-								});
-								if (num == len) {
-									$wholeChexbox.prop("checked", true);
-									$wholeChexbox.next('label').addClass('mark');
-								}
-
-								//店铺下的checkbox选中状态
-								$(this).parents('.cartBox').find('.son_check').prop("checked", true);
-								$(this).parents('.cartBox').find('.son_check').next('label').addClass('mark');
-							} else {
-								//否则，全局全选按钮取消对勾
-								$wholeChexbox.prop("checked", false);
-								$wholeChexbox.next('label').removeClass('mark');
-
-								//店铺下的checkbox选中状态
-								$(this).parents('.cartBox').find('.son_check').prop("checked", false);
-								$(this).parents('.cartBox').find('.son_check').next('label').removeClass('mark');
-							}
-							totalMoney();
-						});
-					});
-
-
-
-					$cartBox.each(function () {
-						var $this = $(this);
-						var $sonChecks = $this.find('.son_check');
-						$sonChecks.each(function () {
-							$(this).click(function () {
-								if ($(this).is(':checked')) {
-									//判断：如果所有的$sonChecks都选中则店铺全选打对勾！
-									var len = $sonChecks.length;
-									var num = 0;
-									$sonChecks.each(function () {
-										if ($(this).is(':checked')) {
-											num++;
-										}
-									});
-									if (num == len) {
-										$(this).parents('.cartBox').find('.shopChoice').prop("checked", true);
-										$(this).parents('.cartBox').find('.shopChoice').next('label').addClass('mark');
-									}
-
-								} else {
-		
-									$(this).parents('.cartBox').find('.shopChoice').prop("checked", false);
-									$(this).parents('.cartBox').find('.shopChoice').next('label').removeClass('mark');
-								}
-								totalMoney();
-							});
-						});
-					});
-
-
-					//=================================================商品数量==============================================
-					var $plus = $('.plus'),
-						$reduce = $('.reduce'),
-						$all_sum = $('.sum');
-					$plus.click(function () {
-						var $inputVal = $(this).prev('input'),
-							$count = parseInt($inputVal.val()) + 1,
-							$obj = $(this).parents('.amount_box').find('.reduce'),
-							$priceTotalObj = $(this).parents('.order_lists').find('.sum_price'),
-							$price = $(this).parents('.order_lists').find('.price').html(),  //单价
-							$priceTotal = $count * parseInt($price.substring(1));
-						$inputVal.val($count);
-						$priceTotalObj.html('￥' + $priceTotal);
-						if ($inputVal.val() > 1 && $obj.hasClass('reSty')) {
-							$obj.removeClass('reSty');
-						}
-						totalMoney();
-					});
-
-					$reduce.click(function () {
-						var $inputVal = $(this).next('input'),
-							$count = parseInt($inputVal.val()) - 1,
-							$priceTotalObj = $(this).parents('.order_lists').find('.sum_price'),
-							$price = $(this).parents('.order_lists').find('.price').html(),  //单价
-							$priceTotal = $count * parseInt($price.substring(1));
-						if ($inputVal.val() > 1) {
-							$inputVal.val($count);
-							$priceTotalObj.html('￥' + $priceTotal);
-						}
-						if ($inputVal.val() == 1 && !$(this).hasClass('reSty')) {
-							$(this).addClass('reSty');
-						}
-						totalMoney();
-					});
-
-					$all_sum.keyup(function () {
-						var $count = 0,
-							$priceTotalObj = $(this).parents('.order_lists').find('.sum_price'),
-							$price = $(this).parents('.order_lists').find('.price').html(),  //单价
-							$priceTotal = 0;
-						if ($(this).val() == '') {
-							$(this).val('1');
-						}
-						$(this).val($(this).val().replace(/\D|^0/g, ''));
-						$count = $(this).val();
-						$priceTotal = $count * parseInt($price.substring(1));
-						$(this).attr('value', $count);
-						$priceTotalObj.html('￥' + $priceTotal);
-						totalMoney();
-					});
-
-					//======================================移除商品========================================
-
-					var $order_lists = null;
-					var $order_content = '';
-					$('.delBtn').click(function () {
-						// function delBtn() {
-						// console.log(1);
-						$order_lists = $(this).parents('.order_lists');
-						$order_content = $order_lists.parents('.order_content');
-						$('.model_bg').fadeIn(300);
-						$('.my_model').fadeIn(300);
-					})
-
-					//关闭模态框
-					$('.closeModel').click(function () {
-						closeM();
-					});
-					$('.dialog-close').click(function () {
-						closeM();
-					});
-					function closeM() {
-						$('.model_bg').fadeOut(300);
-						$('.my_model').fadeOut(300);
-					}
-					//确定按钮，移除商品
-					$('.dialog-sure').click(function () {
-						$order_lists.remove();
-						if ($order_content.html().trim() == null || $order_content.html().trim().length == 0) {
-							$order_content.parents('.cartBox').remove();
-						}
-						closeM();
-						$sonCheckBox = $('.son_check');
-						totalMoney();
-					})
-
-					//======================================总计==========================================
-
-					function totalMoney() {
-						var total_money = 0;
-						var total_count = 0;
-						var calBtn = $('.calBtn a');
-						$sonCheckBox.each(function () {
-							if ($(this).is(':checked')) {
-								var goods = parseInt($(this).parents('.order_lists').find('.sum_price').html().substring(1));
-								var num = parseInt($(this).parents('.order_lists').find('.sum').val());
-								total_money += goods;
-								total_count += num;
-							}
-						});
-						$('.total_text').html('￥' + total_money);
-						$('.piece_num').html(total_count);
-
-						// console.log(total_money,total_count);
-
-						if (total_money != 0 && total_count != 0) {
-							if (!calBtn.hasClass('btn_sty')) {
-								calBtn.addClass('btn_sty');
-							}
-						} else {
-							if (calBtn.hasClass('btn_sty')) {
-								calBtn.removeClass('btn_sty');
-							}
-						}
-					}
-				});
-			}
-		})
-		
-	</script>
-	<script src="./js/checkout.js"></script>
 </body>
-<!-- <ul class="order_lists">
-	<li class="list_chk">
-		<input type="checkbox" id="checkbox_2" class="son_check">
-		<label for="checkbox_2"></label>
-	</li>
-	<li class="list_con">
-		<div class="list_img"><a href="javascript:;"><img src="images/s1.png" alt=""></a></div>
-		<div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
-	</li>
-	<li class="list_info">
-		<p>规格：默认</p>
-		<p>尺寸：16*16*3(cm)</p>
-	</li>
-	<li class="list_price">
-		<p class="price">￥980</p>
-	</li>
-	<li class="list_amount">
-		<div class="amount_box">
-			<a href="javascript:;" class="reduce reSty">-</a>
-			<input type="text" value="1" class="sum">
-			<a href="javascript:;" class="plus">+</a>
-		</div>
-	</li>
-	<li class="list_sum">
-		<p class="sum_price">￥980</p>
-	</li>
-	<li class="list_op">
-		<p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
-	</li>
-</ul> -->
-
-
 </html>

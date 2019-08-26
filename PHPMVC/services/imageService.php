@@ -1,8 +1,8 @@
 <?php
 
 class ImageService{
-    public function _select(){
+    public function _selectAll(){
         $s=new ImageDao;
-        return $s->_select();
+        return $s->_selectAll();
     }
 }  

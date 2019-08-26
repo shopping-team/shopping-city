@@ -13,14 +13,5 @@ function require_file(){
 }
 require_file();
 $controllerName = ucfirst(strtolower($controlName)) . "Controller";
-
-//
-function ControllerAction($controllerName,$actionName) {
-	$controller=new $controllerName();
-	echo $controller->$actionName();
-};
-function orderControllerAction($controllerName,$actionName) {
-	$controller=new $controllerName();
-	echo $controller->$actionName($_REQUEST['sql']);
-}
-$controlName == "orderDetail"?orderControllerAction($controllerName,$actionName):ControllerAction($controllerName,$actionName);	
+$controller = new $controllerName();
+echo $controller->$actionName();

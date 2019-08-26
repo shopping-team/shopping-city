@@ -80,7 +80,7 @@
 				</div>
 				<div class="header-right login">
 					<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-					<!-- <div id="loginBox">
+					<div id="loginBox">
 						<form id="loginForm">
 							<fieldset id="body">
 								<fieldset>
@@ -96,7 +96,7 @@
 							</fieldset>
 							<p>新用户 ? <a class="sign" href="account.html">注册</a> <span><a href="#">忘记密码?</a></span></p>
 						</form>
-					</div> -->
+					</div>
 				</div>
 				<div class="header-right cart">
 					<a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
@@ -344,19 +344,26 @@
 			data: { 'c': 'image', 'a': 'select' },
 			success: function (e) {
 				// console.log(e);
-			  $res = JSON.parse(e);
-				// console.log(res);
-				// $u = res[6]['image_url'];
-				// console.log($u);
-				// str = JSON.parse($u.replace(/'/g, '"'));
-				// console.log(str[0]['尺寸所有值'][0]['折扣价']);
+				var res = JSON.parse(e);
+				console.log(res);
+				$u = res[6]['image_url'];
+				console.log($u);
+				str = JSON.parse($u.replace(/'/g, '"'));
+				console.log(str[0]['尺寸所有值'][0]['折扣价']);
 
-				html = '';
-				 for(var $i=7;$i<32;$i++){
 
-				      html+='<div class="product-grid"><a href="single.html"><div class="more-product"><span> </span></div><div class="product-img b-link-stripe b-animate-go  thickbox"><img src="'+$res[$i]['image_url']+'" class="img-responsive" alt=""><div class="b-wrapper"><h4 class="b-animate b-from-left  b-delay03"><button>View</button></h4></div></div></a><div class="product-info simpleCart_shelfItem"><div class="product-info-cust prt_name"><span class="item_price">$'+$res[$i]['price']+'&nbsp;&nbsp;&nbsp;'+$res[$i]['goods_name']+'</span><div class="ofr"><p class="pric1"><del>$20.00</del></p><p class="disc">Original price</p></div><input type="text" class="item_quantity" value="1" /><input type="button" class="item_add items" value="Add"><div class="clearfix"> </div></div></div></div>'
-				    }
-				$('.tp').append(html);
+
+
+
+
+
+
+				// html = '';
+				//  for(var $i=6;$i<32;$i++){
+
+				//       html+='<div class="product-grid"><a href="single.html"><div class="more-product"><span> </span></div><div class="product-img b-link-stripe b-animate-go  thickbox"><img src="'+$res[$i]['image_url']+'" class="img-responsive" alt=""><div class="b-wrapper"><h4 class="b-animate b-from-left  b-delay03"><button>View</button></h4></div></div></a><div class="product-info simpleCart_shelfItem"><div class="product-info-cust prt_name"><span class="item_price">$'+$res[$i]['price']+'&nbsp;&nbsp;&nbsp;'+$res[$i]['goods_name']+'</span><div class="ofr"><p class="pric1"><del>$20.00</del></p><p class="disc">Original price</p></div><input type="text" class="item_quantity" value="1" /><input type="button" class="item_add items" value="Add"><div class="clearfix"> </div></div></div></div>'
+				//     }
+				// $('.tp').append(html);
 
 			},
 			error: function (e) {
@@ -366,4 +373,5 @@
 		});
 	</script>
 </body>
+
 </html>
